@@ -1,11 +1,16 @@
-<script setup></script>
+<script setup>
+import CampanhasView from './views/CampanhasView.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <header>
+    <div class="container">
+      <h1>Campanhas solidárias</h1>
+      <p>Pequenas doações fazem a diferença na vida de uma criança.</p>
+    </div>
+  </header>
+  <main class="container">
+    <CampanhasView />
+  </main>
+  <footer>Juntos, podemos ajudar mais crianças.</footer>
 </template>
-
-<style scoped></style>
