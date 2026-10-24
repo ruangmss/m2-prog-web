@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# Variaveis de ambiente locais
+.env
+.env.*
+!.env.example
+
+# Arquivos gerados
+dist/
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
