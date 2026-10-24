@@ -15,8 +15,7 @@ export const campanhas = [
   {
     id: 3,
     titulo: 'Campanha de Brinquedos',
-    descricao:
-      'Arrecadação de brinquedos para crianças para crianças em situação de vulnerabilidade.',
+    descricao: 'Arrecadação de brinquedos para crianças em situação de vulnerabilidade.',
     meta: 150,
   },
 ];

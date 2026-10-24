@@ -5,7 +5,7 @@ import { doacoes } from '../data/doacoes.js';
 const router = Router();
 
 router.post('/', (request, response) => {
-  const { campanhaId, doador, quantidade } = request.body ?? {};
+  const { campanhaId, doador, quantidade } = request.body ? request.body : {};
 
   if (
     !Number.isInteger(campanhaId) ||
@@ -29,9 +29,9 @@ router.post('/', (request, response) => {
 
   const novaDoacao = {
     id: doacoes.length ? Math.max(...doacoes.map((doacao) => doacao.id)) + 1 : 1,
-    campanhaId,
+    campanhaId: campanhaId,
     doador: doador.trim(),
-    quantidade,
+    quantidade: quantidade,
   };
 
   doacoes.push(novaDoacao);
