@@ -1,1 +1,1 @@
-const doacoes = [];
+export const doacoes = [];

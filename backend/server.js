@@ -19,7 +19,6 @@ app.use((request, response) => {
   });
 });
 
-// Inicialização
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
