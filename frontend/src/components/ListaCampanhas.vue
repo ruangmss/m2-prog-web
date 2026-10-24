@@ -1,12 +1,12 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 defineProps({
   campanhas: { type: Array, required: true },
   carregando: Boolean,
   erroCampanhas: String,
-  enviando: Boolean,
 })
 
-defineEmits(['tentar-novamente', 'selecionar'])
+defineEmits(['tentar-novamente'])
 </script>
 
 <template>
@@ -23,9 +23,7 @@ defineEmits(['tentar-novamente', 'selecionar'])
         <h3>{{ campanha.titulo }}</h3>
         <p>{{ campanha.descricao }}</p>
         <p class="meta">Meta: {{ campanha.meta }} itens</p>
-        <button type="button" :disabled="enviando" @click="$emit('selecionar', campanha.id)">
-          Quero doar
-        </button>
+        <RouterLink class="botao" :to="`/campanhas/${campanha.id}`">Ver detalhes</RouterLink>
       </article>
     </div>
   </section>

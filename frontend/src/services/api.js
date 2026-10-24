@@ -30,6 +30,10 @@ export async function listarCampanhas() {
   return dados
 }
 
+export function buscarCampanha(id) {
+  return requisitar('/campanhas/' + encodeURIComponent(id))
+}
+
 export function registrarDoacao(doacao) {
   return requisitar('/doacoes', {
     method: 'POST',

@@ -25,6 +25,21 @@ h1 {
 header p {
   margin-bottom: 0;
 }
+a {
+  color: #286447;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  border-radius: 4px;
+}
+a:hover {
+  color: #1b4b33;
+  text-decoration-thickness: 2px;
+}
+main a:not(.botao) {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
 main {
   padding: 24px 0;
 }
@@ -87,7 +102,8 @@ select {
   color: inherit;
   font: inherit;
 }
-button {
+button,
+.botao {
   border: 0;
   border-radius: 4px;
   background: #286447;
@@ -95,9 +111,13 @@ button {
   padding: 11px 18px;
   font: inherit;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
-button:hover {
+button:hover,
+.botao:hover {
   background: #1b4b33;
+  color: white;
 }
 button:disabled {
   opacity: 0.6;
@@ -127,6 +147,27 @@ footer {
   text-align: center;
   padding: 20px;
   color: #59695e;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+nav a {
+  color: white;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+nav a:hover {
+  color: white;
+  background: #1b4b33;
+}
+nav a.router-link-active {
+  color: #1b4b33;
+  background: #e3f2e6;
+  font-weight: bold;
 }
 @media (max-width: 700px) {
   .campanhas {

@@ -34,13 +34,21 @@ Se o PowerShell bloquear os comandos, use `npm.cmd` no lugar de `npm`.
 ## Como usar
 
 1. Consulte as campanhas disponíveis e suas metas.
-2. Clique em **Quero doar** ou selecione uma campanha no formulário.
+2. Clique em **Ver detalhes** e depois em **Quero doar**, ou abra **Registrar doação** no menu.
 3. Informe seu nome e a quantidade de itens.
 4. Clique em **Registrar doação** e aguarde a confirmação.
 
 Se ocorrer um erro, confira se o backend está em execução e tente novamente.
 
 As doações são armazenadas apenas na memória e são apagadas quando o backend reinicia.
+
+## Páginas
+
+- `/campanhas`: listagem das campanhas.
+- `/campanhas/:id`: detalhes de uma campanha.
+- `/doacoes/nova`: formulário de doação.
+
+Ao acessar o formulário pelos detalhes, a campanha já estará selecionada.
 
 ## Gerar a versão de produção
 
@@ -52,3 +60,5 @@ npm run preview
 ```
 
 O build gera os arquivos na pasta `frontend/dist`. O comando de preview permite conferir essa versão localmente e também precisa do backend em execução.
+
+Na hospedagem, encaminhe `/api` para o backend e configure as rotas do front-end para servir `index.html`, permitindo abrir as páginas diretamente pelo endereço.

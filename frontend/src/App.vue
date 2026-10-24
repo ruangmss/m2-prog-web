@@ -1,5 +1,5 @@
 <script setup>
-import CampanhasView from './views/CampanhasView.vue'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -7,10 +7,14 @@ import CampanhasView from './views/CampanhasView.vue'
     <div class="container">
       <h1>Campanhas solidárias</h1>
       <p>Pequenas doações fazem a diferença na vida de uma criança.</p>
+      <nav aria-label="Navegação principal">
+        <RouterLink to="/campanhas">Campanhas</RouterLink>
+        <RouterLink to="/doacoes/nova">Registrar doação</RouterLink>
+      </nav>
     </div>
   </header>
   <main class="container">
-    <CampanhasView />
+    <RouterView :key="$route.fullPath" />
   </main>
   <footer>Juntos, podemos ajudar mais crianças.</footer>
 </template>
